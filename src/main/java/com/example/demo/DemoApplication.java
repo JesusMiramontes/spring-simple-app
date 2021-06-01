@@ -10,9 +10,15 @@ import java.time.LocalDate;
 import java.util.List;
 
 @SpringBootApplication
+@RestController // Makes this class to server endpoints
 public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
+	}
+
+	@GetMapping
+	public String hello(){
+		return "Hello";
 	}
 }
