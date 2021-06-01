@@ -17,8 +17,24 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
+//	@GetMapping
+//	public String hello(){
+//		return "Hello";
+//	}
+
 	@GetMapping
-	public String hello(){
-		return "Hello";
+	public List<Student> hello(){
+		return List.of(
+				new Student(1L,
+						"Mairam",
+						"mariam@gmail.com",
+						LocalDate.of(1995, 1, 15),
+						21),
+				new Student(1L,
+						"Joseph",
+						"Joseph@gmail.com",
+						LocalDate.of(1995, 2, 15),
+						21)
+		);
 	}
 }
