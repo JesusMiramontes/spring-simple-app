@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @SpringBootApplication
-@RestController // Makes this class to server endpoints
+//@RestController // Makes this class to server endpoints
 public class DemoApplication {
 
 	public static void main(String[] args) {
@@ -21,20 +21,4 @@ public class DemoApplication {
 //	public String hello(){
 //		return "Hello";
 //	}
-
-	@GetMapping
-	public List<Student> hello(){
-		return List.of(
-				new Student(1L,
-						"Mairam",
-						"mariam@gmail.com",
-						LocalDate.of(1995, 1, 15),
-						21),
-				new Student(1L,
-						"Joseph",
-						"Joseph@gmail.com",
-						LocalDate.of(1995, 2, 15),
-						21)
-		);
-	}
 }
